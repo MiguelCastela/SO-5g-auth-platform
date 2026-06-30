@@ -9,11 +9,14 @@ and social media) from mobile users against a per-user data allowance (the "plaf
 built entirely on top of classic UNIX inter-process communication and synchronization
 primitives.
 
+<<<<<<< Updated upstream
 ## Authors
 
 - Nuno Batista
 - Miguel Castela 
 
+=======
+>>>>>>> Stashed changes
 ## Overview
 
 The platform is composed of three independent executables that cooperate through shared system
@@ -165,3 +168,8 @@ After changing any of these, rebuild with `make clean && make`.
 
 While running, all components append timestamped events to a shared `log.txt` file created in
 the working directory. It is removed by `make clean`.
+
+## Authors
+
+- Nuno Batista
+- Miguel Castela
