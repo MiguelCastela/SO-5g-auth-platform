@@ -1,0 +1,18 @@
+# Build artifacts
+build/
+bin/
+*.o
+
+# Compiled binaries (in case of in-tree builds)
+5g_auth_platform
+mobile_user
+backoffice_user
+
+# Runtime artifacts
+log.txt
+*.lock
+
+# Editor / OS files
+*.swp
+.vscode/
+.DS_Store
