@@ -11,8 +11,8 @@ primitives.
 
 ## Authors
 
-- Nuno Batista (uc2022216127)
-- Miguel Castela (uc2022212972)
+- Nuno Batista
+- Miguel Castela 
 
 ## Overview
 
