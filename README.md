@@ -9,14 +9,6 @@ and social media) from mobile users against a per-user data allowance (the "plaf
 built entirely on top of classic UNIX inter-process communication and synchronization
 primitives.
 
-<<<<<<< Updated upstream
-## Authors
-
-- Nuno Batista
-- Miguel Castela 
-
-=======
->>>>>>> Stashed changes
 ## Overview
 
 The platform is composed of three independent executables that cooperate through shared system
