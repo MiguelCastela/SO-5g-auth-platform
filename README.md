@@ -9,14 +9,6 @@ and social media) from mobile users against a per-user data allowance (the "plaf
 built entirely on top of classic UNIX inter-process communication and synchronization
 primitives.
 
-<<<<<<< Updated upstream
-## Authors
-
-- Nuno Batista
-- Miguel Castela 
-
-=======
->>>>>>> Stashed changes
 ## Overview
 
 The platform is composed of three independent executables that cooperate through shared system
@@ -48,6 +40,20 @@ resources:
 
 All activity is timestamped and recorded in a shared `log.txt` file, guarded by a semaphore.
 
+### Architecture
+
+![Architecture and synchronization mechanisms](docs/images/architecture.png)
+
+Every IPC and synchronization primitive in the system, and which component owns it.
+Orange boxes are processes, cyan boxes are threads, traffic lights are semaphores,
+padlocks are mutexes and the post is a condition variable. Mobile users reach the
+Authorization Request Manager over `USER_PIPE` and the backoffice over `BACK_PIPE`;
+the ARM's sender thread feeds the authorization engines over unnamed pipes, engines
+and the monitor share the users' consumption table in shared memory, and
+notifications go back out through the message queue.
+
+Full-resolution source: [`docs/Final_Diagram.pdf`](docs/Final_Diagram.pdf).
+
 ## Concepts demonstrated
 
 - Process creation and management (`fork`, `exec`, `wait`)
@@ -72,7 +78,8 @@ All activity is timestamped and recorded in a shared `log.txt` file, guarded by 
 ├── docs/
 │   ├── Assignment_Spec_2023_2024.pdf   # Original assignment statement
 │   ├── Final_Diagram.pdf               # Architecture diagram
-│   └── Final_Report.pdf                # Project report
+│   ├── Final_Report.pdf                # Project report
+│   └── images/                         # Diagram export used in this README
 ├── include/
 │   ├── global.h             # Shared types, globals and configuration macros
 │   ├── queue.h              # Request and queue definitions
